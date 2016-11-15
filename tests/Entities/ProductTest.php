@@ -15,7 +15,6 @@ class ProductTest extends \PHPUnit_Framework_TestCase
 
     public function testProductName()
     {
-        echo "Test 1";
         $product = new Product();
         $product->setName("Product 1");
 
@@ -24,7 +23,6 @@ class ProductTest extends \PHPUnit_Framework_TestCase
 
     public function testDescriptionValue()
     {
-        echo "Test 2";
         $product = new Product();
         $product->setDescription("Product description 1");
 
@@ -33,7 +31,6 @@ class ProductTest extends \PHPUnit_Framework_TestCase
 
     public function testPriceValue()
     {
-        echo "Test 3";
         $product = new Product();
         $product->setPrice(10.00);
 
@@ -45,7 +42,6 @@ class ProductTest extends \PHPUnit_Framework_TestCase
      */
     public function testPriceValueWhenANotNumericGiven()
     {
-        echo "Test 4";
         $product = new Product();
         $product->setPrice("adfadf");
     }
