@@ -3,7 +3,7 @@ namespace Rafael\Cart;
 
 use Rafael\Cart\Entities\ProductInterface;
 
-class Order
+class Cart
 {
     protected $products;
 

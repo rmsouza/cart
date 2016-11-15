@@ -3,9 +3,9 @@
 namespace Rafael\Cart\Tests;
 
 use Rafael\Cart\Entities\Product;
-use Rafael\Cart\Order;
+use Rafael\Cart\Cart;
 
-class OrderTest extends \PHPUnit_Framework_TestCase
+class CartTest extends \PHPUnit_Framework_TestCase
 {
     public function testProductList()
     {
@@ -21,11 +21,11 @@ class OrderTest extends \PHPUnit_Framework_TestCase
 
         $products = new \ArrayObject([$product, $product2]);
 
-        $order = new Order();
-        $order->addProduct($product);
-        $order->addProduct($product2);
+        $cart = new Cart();
+        $cart->addProduct($product);
+        $cart->addProduct($product2);
 
-        $this->assertEquals($products, $order->getProducts());
+        $this->assertEquals($products, $cart->getProducts());
     }
 
     public function testGetTotal()
@@ -42,12 +42,12 @@ class OrderTest extends \PHPUnit_Framework_TestCase
 
         $products = new \ArrayObject([$product, $product2]);
 
-        $order = new Order();
-        $order->addProduct($product);
-        $order->addProduct($product2);
+        $cart = new Cart();
+        $cart->addProduct($product);
+        $cart->addProduct($product2);
 
         $total = 30;
-        $this->assertEquals($total, $order->getTotal());
+        $this->assertEquals($total, $cart->getTotal());
     }
 
 
