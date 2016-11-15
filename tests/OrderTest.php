@@ -1,9 +1,9 @@
 <?php
 
-namespace Rafael\Cart\Entities\Tests;
+namespace Rafael\Cart\Tests;
 
 use Rafael\Cart\Entities\Product;
-use Rafael\Cart\Entities\Order;
+use Rafael\Cart\Order;
 
 class OrderTest extends \PHPUnit_Framework_TestCase
 {

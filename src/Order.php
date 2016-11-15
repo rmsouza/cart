@@ -1,5 +1,7 @@
 <?php
-namespace Rafael\Cart\Entities;
+namespace Rafael\Cart;
+
+use Rafael\Cart\Entities\ProductInterface;
 
 class Order
 {
@@ -23,9 +25,7 @@ class Order
     {
         $total = 0;
         foreach ($this->products as $product)
-        {
             $total += $product->getPrice();
-        }
         return $total;
     }
 }
